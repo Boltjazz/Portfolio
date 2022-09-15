@@ -1,0 +1,101 @@
+.stage-cube-cont {
+  width: 50%;
+  height: 100%;
+  top: 0;
+  padding-top: 18%;
+  margin-left: 0;
+  position: absolute;
+  right: 0;
+  overflow: hidden auto;
+}
+
+.cubespinner {
+  animation-name: spincube;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 13s;
+  transform-style: preserve-3d;
+  transform-origin: 100px 100px 0;
+   margin-left: calc(50% - 100px); 
+
+  div {
+    position: absolute;
+    width: 200px auto;
+    height: 200px auto;
+    top: 50% auto;
+    bottom: 50% auto;
+    border: 1px solid #ccc;
+    background: rgba(255, 255, 255, 0.4);
+    text-align: center;
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .face1 {
+    transform: translateZ(100px);
+  }
+  .face1 img {
+    width: 200px;
+    height: 200px;
+  }
+  .face2 {
+    transform: rotateY(90deg) translateZ(100px);
+  }
+  .face2 img {
+    width: 200px;
+    height: 200px;
+  }
+  .face3 {
+    transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
+  }
+  .face3 img {
+    width: 200px;
+    height: 200px;
+  }
+  .face4 {
+    transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
+  }
+  .face4 img {
+    width: 200px;
+    height: 200px;
+  }
+  .face5 {
+    transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
+  }
+  .face5 img {
+    width: 200px;
+    height: 200px;
+  }
+  .face6 {
+    transform: rotateX(-90deg) translateZ(100px);
+  }
+  .face6 img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@keyframes spincube {
+  from,
+  to {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  16% {
+    transform: rotateY(-90deg);
+  }
+  33% {
+    transform: rotateY(-90deg) rotateZ(90deg);
+  }
+  50% {
+    transform: rotateY(-180deg) rotateZ(90deg);
+  }
+  66% {
+    transform: rotateY(-270deg) rotateX(90deg);
+  }
+  83% {
+    transform: rotateX(90deg);
+  }
+}

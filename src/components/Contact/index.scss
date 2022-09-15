@@ -1,0 +1,84 @@
+.contact-form {
+    width: 100%;
+    margin-top: 20px;
+
+    ul {
+        padding: 0;
+        margin: 0;
+
+        li {
+            padding: 0;
+            margin: 0;
+            list-style:  none;
+            margin-bottom: 10px;
+            overflow: hidden;
+            display: block;
+            position: relative;
+            opacity: 0;
+            animation: fadeInUp 2s 2s;
+            animation-fill-mode: forwards;
+            clear: both;
+        }
+
+        li.half {
+            width:49%;
+            margin-left: 2%;
+            float: left;
+            clear: none;
+
+            &:first-child {
+                margin-left: 0;
+
+            }
+        }
+    }
+
+    input[type='text'],
+    input[type='email'] {
+        width: 100%;
+        border: 0;
+        height: 50px;
+        font-size: 16px;
+        color: #000;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+    textarea {
+        width: 100%;
+        border: 0;
+        height: 50px;
+        color: #000;
+        padding: 20px;
+        min-height: 150px;
+        box-sizing: border-box;
+    }
+
+    .flat-button {
+        color: #fff;
+        background: 0 0;
+        font: 11px;
+        letter-spacing: 3px;
+        text-decoration: none;
+        padding: 8px 10px;
+        border: 1px solid #fff;
+        float: right;
+        border-radius: 4px;
+    }
+}
+
+.map-wrap {
+    background: rgba(8, 253, 216, 0.1);
+    width: 53%;
+    height: 115%;
+}
+.leaflet-container {
+    width: 100%;
+    height: 105%;
+    bottom: -5%;
+    left: 130%;
+    position: absolute;
+    opacity: 0;
+    animation: backInRight 1s 1.2s;
+    animation-fill-mode: forwards;
+}
+
